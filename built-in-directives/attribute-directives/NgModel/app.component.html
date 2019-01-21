@@ -1,0 +1,27 @@
+// ngModel provides two way data binding
+// means both display hero's name and updates it when the user makes changes
+<input [(ngModel)]="currentHero.name">
+
+// actually above syntax boils down to this
+// ngModel hides the complexity
+<input
+    [value]="currentHero.name"
+    (input)="currentHero.name=$event.target.value"
+>
+<input
+    [ngModel]="currentHero.name" <- the ngModel data property sets the element's value property
+    (ngModelChange)="currentHero.name=$event" <- the ngModelChange event property listens for changes to the element's value
+>
+
+// ngModel is helpful for form operations.
+// we can't apply it to a non-form native element / third party custom component (unless we write a suitable `value accessor`).
+// we don't need a `value accessor` for an Angular component that we write
+// because we can name `the value` and `event properties` to suit Angular's basic two-way data binding syntax
+// and skip `ngModel` completely
+
+// The [(ngModel)] syntax can only set a data-bound property.
+// Means if we want to do more, we simply write the expanded form as below;
+<input
+    [ngModel]="currentHero.name"
+    (ngModelChange)="setUppercaseName($event)"
+>
