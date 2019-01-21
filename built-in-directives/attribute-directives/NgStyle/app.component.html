@@ -1,0 +1,9 @@
+// setting single style value based on `isSpecial` value
+<div [style.font-size]="isSpecial : 'large' : 'small'">
+    font could be large or smaller
+</div>
+
+// setting many styles instead of single like above example
+<div [ngStyle]="currentStyles">
+    this div has 3 styles
+</div>
