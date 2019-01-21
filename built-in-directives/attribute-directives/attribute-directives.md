@@ -1,0 +1,1 @@
+Attribute directives listen to and modify the "behavior" of other HTML elements, attributes, properties, and components. They are usually applied to elements as if they were HTML attributes.
