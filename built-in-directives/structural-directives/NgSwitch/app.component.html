@@ -1,0 +1,20 @@
+// NgSwitch directives
+
+NgSwitch is an attribute directive, not a structural directive.
+It changes the behavior of its companion directives.
+It doesn't touch the DOM directly.
+
+So why it is in this section?
+Because it is used with `NgSwitchCase` and `NgSwitchDefault` (yes, they are structural directives)
+
+<div [ngSwitch]="currentHero.emotion">
+    <app-happy-hero     *ngSwitchCase="'happy'"     [hero]="currentHero"></app-happy-hero>
+    <app-sad-hero       *ngSwitchCase="'sad'"       [hero]="currentHero"></app-sad-hero>
+    <app-confused-hero  *ngSwitchCase="'confused'"  [hero]="currentHero"></app-confused-hero>
+    <app-unknown-hero   *ngSwitchDefault            [hero]="currentHero"></app-unknown-hero>
+</div>
+
+Hmmm...
+! Pay attention to the `*` char.
+It is not used with `ngSwitch` but used with `ngSwitchCase`.
+I don't remember if I read on the documentation but I can assume it is used with `structural directives`.
