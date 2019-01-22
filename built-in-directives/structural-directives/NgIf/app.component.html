@@ -1,0 +1,22 @@
+// after evaluating `isActive` expression, if result is `truthy` NgIf adds the hero-detail component to DOM.
+// if result is falsy, removes component and its all children from DOM
+<app-hero-detail *ngIf="isActive">this is hero detail</app-hero-detail>
+
+// showing-hiding is not the same thing
+// we can use `class` or `style` binding to do so
+// isSpecial=true
+
+// class usage
+<div [class.hidden]="!isSpecial">shows</div>
+<div [class.hidden]="isSpecial">hides</div>
+
+// style usage
+<div [style.display]="isSpecial ? 'block' : 'none'">shows</div>
+<div [style.display]="isSpecial ? 'non' : 'block'">hide</div>
+
+// hero-detail is in the DOM, but hidden
+<app-hero-detail [class.hidden]="isSpecial"></app-hero-detail>
+
+// we can use NgIf with null checks
+// if there is currentHero, then div will be added to DOM caused to be printed name of hero
+<div *ngIf="currentHero">Hello, {{currentHero.name}}</div>
