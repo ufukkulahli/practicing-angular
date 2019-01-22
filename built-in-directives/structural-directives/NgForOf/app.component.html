@@ -1,0 +1,24 @@
+// Angular documentation says NgForOf is a `repeater` directive, simply put; loop.
+
+// apply to a div
+<div *ngFor="let hero of heroes">{{hero.name}}</div>
+
+// apply to a component
+<app-hero-detail *ngFor="let hero of heroes" [hero]="hero"></app-hero-detail>
+
+// the string assigned to `*ngFor` is not an `template expression`.
+// framework interprets string and prepares every hero variable for templated HTML for `iteration`
+
+// because `template expression` is to evaluate as told in previous sections in documentation.
+
+// Angular documentation is very clear about terms used in Angular framework which is very good.
+
+"let hero of heroes"
+// Angular calls hero as `template input variable` which `let` creates.
+
+// Angular provides zero based indexing
+<div *ngFor="let hero of heroes; let i=index">{{i+1}} {{hero.name}}</div>
+
+// Hmmm... NgFor and NgForOf is not the same thing... We learned that now.
+NgFor is implemented by the NgForOf directive.
+Read more about the other NgForOf context values such as `last`, `even`, and `odd` in the NgForOf API reference.
