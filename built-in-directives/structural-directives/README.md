@@ -6,3 +6,6 @@ common structural directives:
 NgIf - conditionally add or remove an element from the DOM
 NgSwitch - a set of directives that switch among alternative views
 NgForOf - repeat a template for each item in a list
+
+Directives are applied to `elements`.
+When a directive is applied to an element, that element is called then `host` element.
