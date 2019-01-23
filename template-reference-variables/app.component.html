@@ -1,0 +1,16 @@
+Template reference variables ( #var )
+Means, we can access a variables value anywhere in template.
+Variable could be a reference to a;
+* DOM element(within template)
+* Angular component
+* Angular directive
+* A web component
+
+Example
+<input #phone placeholder="phone number">
+// other elements
+<button (click)="callPhone(phone.value)">Call</button>
+
+So how a reference variable gets its value?
+Angular sets the `reference variable`s value to the element on which it was declared.
+`phone` refers to the `phone number <input> box`
