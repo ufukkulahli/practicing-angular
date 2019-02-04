@@ -12,7 +12,7 @@ export class VoterComponent {
     didVote=false;
     @Input name: string;
     @Output voted = new EventEmitter<boolean>();
-    
+
     vote(agreed: boolean) {
         this.voted.emit(agreed);
         this.didVote=true;
