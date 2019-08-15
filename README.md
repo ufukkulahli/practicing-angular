@@ -1,2 +1,2 @@
-# practicing-angular
-Path to practice Angular.
+# Practicing Angular
+Reading and practicing path of Angular framework.
